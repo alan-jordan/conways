@@ -11,8 +11,16 @@ test('an array of the right length is created', function (t) {
 
 test('A 2d array is created', function (t) {
   var size = 3
+  var expected = true || false
+  var actual = createBoard(size)[2][2]
+  t.deepEqual(actual, expected, 'A 2d array element is returned')
+  t.end()
+})
+
+test('Is a random array generated', function (t) {
+  var size = 3
   var expected = [ [ true, true, true ], [ true, true, true ], [ true, true, true ] ]
   var actual = createBoard(size)
-  t.deepEqual(actual, expected, 'A 2d array element is returned')
+  t.notDeepEqual(actual, expected, 'Board is randomised')
   t.end()
 })
