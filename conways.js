@@ -1,6 +1,7 @@
 //generates initial board
 //loops through each cell on the board and works out
-  // Number of neighbours eg. out of bounds
+  // Number of neighbours
+  // Neighbours out of bounds
   // neighbours status, counts trues
   // Checks the next state of that cell
   // Updates the cell if required.
