@@ -18,3 +18,12 @@ test('getNeighbours returns the correct number of neighbours in a corner cell', 
   t.equal(actual, expected, 'getNeighbours returns the correct number of neighbours in a corner cell')
   t.end()
 })
+
+test('getNeighbours returns the correct number of neighbours in a wall cell', function(t) {
+  var cell = [0,1]
+  var boardSize = 3
+  var expected = 5
+  var actual = getNeighbours(cell, boardSize).length
+  t.equal(actual, expected, 'getNeighbours returns the correct number of neighbours in a wall cell')
+  t.end()
+})
