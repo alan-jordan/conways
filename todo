@@ -1,6 +1,4 @@
 
-// Functions to check next state
-
 // Function to check if out of bounds
 // Function to randomise board at start
 // Function to loop through board and apply checkNeigbour functions
