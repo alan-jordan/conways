@@ -1,6 +1,8 @@
 var test = require('tape')
 var checkCells = require('../checkCells')
 var checkBoard = require('../createBoard')
+var getNeighbours = require('../getNeighbours')
+
 
 test('Check that checkCells works', function(t) {
   var size = 3
