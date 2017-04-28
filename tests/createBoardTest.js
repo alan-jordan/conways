@@ -12,7 +12,8 @@ test('an array of the right length is created', function (t) {
 test('A 2d array is created', function (t) {
   var size = 3
   var expected = true || false
-  var actual = createBoard(size)[2][2]
+  var cell = createBoard(size)[2][2]
+  var actual = cell !== 'undefined'
   t.equal(actual, expected, 'A 2d array element is returned')
   t.end()
 })
