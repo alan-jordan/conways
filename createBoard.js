@@ -11,7 +11,7 @@ function createBoard(size) {
 
 function randomnessGenerator(){ // Returns true or false 50 % of the time
   int = Math.floor(Math.random() * (10 - 1)) + 1;
-  return int > 5 ? true : false
+  return int > 5
 }
 
 module.exports = createBoard
