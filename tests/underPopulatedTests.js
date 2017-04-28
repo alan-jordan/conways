@@ -1,5 +1,5 @@
 var test = require('tape')
-var createBoard = require('../createBoard')
+var underPopulated = require('../underPopulated')
 
 test('is cell underpopulated', function (t) {
   var getNeighbour = {
@@ -13,8 +13,10 @@ test('is cell underpopulated', function (t) {
     7: false,
     8: false
   }
-  var expected = 10
-  var actual = createBoard(size).length
-  t.equal(actual, expected, 'A game board is created')
+  for(cell in getNeighbour) {
+    var expected = getNeighbour[cell]
+    var actual = underPopulated(cell)
+    t.equal(actual, expected, 'Returns correct state if cell is under populated')
+  }
   t.end()
 })
