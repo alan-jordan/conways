@@ -47,7 +47,7 @@ function decrementCellElement(cellElement) {
 }
 function discardInvalidNeighbours(neighbours, size) {
   var validNeighbours = neighbours.filter(function(neighbour) {
-    return neighbour[0] >= 0 && neighbour[1] >= 0 && neighbour[0] <= size && neighbour[1] <= size
+    return neighbour[0] >= 0 && neighbour[1] >= 0 && neighbour[0] < size && neighbour[1] < size
   })
   return validNeighbours
 }
