@@ -19,6 +19,7 @@ var cellsArr = checkCells(currentBoard)
 
 console.log(currentBoard)
 
+// Needs a new cellsArr to be returned from somewhere and pushed into the timeout function
 let timerId = setTimeout(function delay(){
   clear()
   currentBoard = checkNextCellStatus(cellsArr, currentBoard)
