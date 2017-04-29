@@ -11,7 +11,8 @@
 var createBoard = require('./createBoard')
 var checkCells = require('./checkCells')
 var getNeighbours = require('./getNeighbours')
+var checkNextCellStatus = require('./checkNextCellStatus')
 
 currentBoard = createBoard(3)
 cellsArr = checkCells(currentBoard)
-console.log(cellsArr);
+checkNextCellStatus(cellsArr, currentBoard)

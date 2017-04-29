@@ -8,6 +8,7 @@ function checkNeighbourStatus(board, cells) {
       board[row][col] === true ? aliveCount = incrementAlive(aliveCount) : false
     })
     cells[i].aliveCount = aliveCount
+    setCellStatus(cells[i])
     }
   return cells
 }
@@ -16,5 +17,12 @@ function incrementAlive(aliveCount){
   return aliveCount + 1
 }
 
+function setCellStatus(cell) {
+  cell.aliveCount > 2 ? cell.underPopulated = true : false
+  cell.aliveCount == 2 ? cell.staysAlive = true : false
+  cell.aliveCount == 3 ? cell.resurrectable = true : false
+  cell.aliveCount > 3 ? cell.overPopulated = true : false
+  console.log(cell);
+  }
 
 module.exports = checkNeighbourStatus
