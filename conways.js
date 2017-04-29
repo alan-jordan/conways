@@ -12,7 +12,7 @@ var createBoard = require('./createBoard')
 var checkCells = require('./checkCells')
 var getNeighbours = require('./getNeighbours')
 
-currentBoard = createBoard(10)
+currentBoard = createBoard(3)
 neighboursArr = checkCells(currentBoard)
 
 // console.log(neighboursArr);
