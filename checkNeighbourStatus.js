@@ -1,7 +1,10 @@
 function checkNeighbourStatus(board, neighbours) {
   var aliveCount = 0
   var deadCount = 0
-  for(var i = 0; i < board.length; i++) {
+  for(var i = 0; i < neighbours.length; i++) {
+    console.log(neighbours[i].neighbours)
+    
+    // console.log(neighbours);
       // var el1 = neighbours
       // var el2 = neighbours[i]
       // console.log(el1);

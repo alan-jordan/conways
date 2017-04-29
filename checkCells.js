@@ -15,7 +15,6 @@ function checkCells(board) {
     arr.push(getNeighbours(cell, board.length))
   })
   aliveCountArr.push(checkNeighbourStatus(board, arr))
-  // console.log(aliveCountArr);
   return arr
 }
 module.exports = checkCells

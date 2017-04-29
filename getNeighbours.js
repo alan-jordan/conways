@@ -1,4 +1,7 @@
 function getNeighbours(cell, boardSize) {
+  var name = cell.toString()
+  var name = { cellPos: cell}
+
   neighbours = []
   neighbours.push([
     decrementCellElement(cell[0]),
@@ -33,10 +36,8 @@ function getNeighbours(cell, boardSize) {
     cell[1]
   ])
   validneighbours = discardInvalidNeighbours(neighbours, boardSize)
-  console.log(cell);
-  console.log("-----------");
-  console.log(validneighbours);
-  return validneighbours
+  name.neighbours = validneighbours
+  return name
 }
 function incrementCellElement(cellElement) {
   return cellElement + 1
