@@ -1,11 +1,14 @@
 function checkNeighbourStatus(board, neighbours) {
   var aliveCount = 0
   var deadCount = 0
-  for(var i = 0; i < 3; i++) {
-    var el1 = neighbours[i][0]
-    var el2 = neighbours[i][1]
-    board[el1][el2] === true ? aliveCount = incrementAlive(aliveCount) : deadCount = incrementDead(deadCount)
-  }
+  for(var i = 0; i < board.length; i++) {
+      console.log(neighbours[i]);
+      console.log("==========");
+      // var el1 = neighbours[i][j][0]
+      // var el2 = neighbours[i][j][1]
+      // console.log(el1);
+      // board[el1][el2] === true ? aliveCount = incrementAlive(aliveCount) : deadCount = incrementDead(deadCount)
+    }
   return aliveCount
 }
 

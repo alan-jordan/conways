@@ -1,7 +1,9 @@
 var getNeighbours = require('./getNeighbours')
+var checkNeighbourStatus = require('./checkNeighbourStatus')
 
 function checkCells(board) {
-  arr = []
+  var arr = []
+  var aliveCountArr = []
   var allCells = []
   for (var i = 0; i < board.length; i++) {
     for (var j = 0; j < board.length; j++) {
@@ -12,6 +14,8 @@ function checkCells(board) {
   neighbours = allCells.map(function(cell) {
     arr.push(getNeighbours(cell, board.length))
   })
+  aliveCountArr.push(checkNeighbourStatus(board, arr))
+  // console.log(aliveCountArr);
   return arr
 }
 module.exports = checkCells

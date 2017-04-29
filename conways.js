@@ -7,3 +7,14 @@
   // Updates the cell if required.
 // Once at end of loop, displays next board
   // Then Performs loop through to check next cell state
+
+var createBoard = require('./createBoard')
+var checkCells = require('./checkCells')
+var getNeighbours = require('./getNeighbours')
+
+currentBoard = createBoard(10)
+neighboursArr = checkCells(currentBoard)
+
+// console.log(neighboursArr);
+
+// console.log(currentBoard);
