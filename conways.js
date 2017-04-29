@@ -14,3 +14,4 @@ var getNeighbours = require('./getNeighbours')
 
 currentBoard = createBoard(3)
 cellsArr = checkCells(currentBoard)
+console.log(cellsArr);
