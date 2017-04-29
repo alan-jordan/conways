@@ -15,7 +15,7 @@ var getNeighbours = require('./getNeighbours')
 var checkNextCellStatus = require('./checkNextCellStatus')
 var renderBoard = require('./renderBoard')
 
-var currentBoard = createBoard(10)
+var currentBoard = createBoard(25)
 var cellsArr = checkCells(currentBoard)
 clear()
 renderBoard(currentBoard)
