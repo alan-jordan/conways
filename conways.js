@@ -13,23 +13,17 @@ var createBoard = require('./createBoard')
 var checkCells = require('./checkCells')
 var getNeighbours = require('./getNeighbours')
 var checkNextCellStatus = require('./checkNextCellStatus')
+var renderBoard = require('./renderBoard')
 
 var currentBoard = createBoard(10)
 var cellsArr = checkCells(currentBoard)
+clear()
+renderBoard(currentBoard)
 
-console.log(currentBoard)
-
-// Needs a new cellsArr to be returned from somewhere and pushed into the timeout function
 let timerId = setTimeout(function delay(){
   clear()
+  cellsArr = checkCells(currentBoard)
   currentBoard = checkNextCellStatus(cellsArr, currentBoard)
-  console.log(currentBoard)
-  timerId = setTimeout(delay, 10)
-}, 10)
-
-  // let timerId = setTimeout(function tick() {
-  //   clear()
-  //   currentBoard = checkNextCellStatus(cellsArr, currentBoard)
-  //   console.log(currentBoard);
-  //   timerId = setTimeout(tick, 100); // (*)
-  // }, 1000);
+  renderBoard(currentBoard)
+  timerId = setTimeout(delay, 1000)
+}, 1000)
