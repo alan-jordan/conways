@@ -11,7 +11,7 @@ test('Check that a dead resurrectable cell revives', function(t) {
   board = createBoard(3)
   var cells = checkCells(board)
   var test = cells.map(function(cell){
-    
+
   })
   //var board = checkBoard(size)
   //var actual = checkCells(board).length

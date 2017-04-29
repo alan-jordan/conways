@@ -7,12 +7,28 @@
   // Updates the cell if required.
 // Once at end of loop, displays next board
   // Then Performs loop through to check next cell state
+var clear = require('clear');
 
 var createBoard = require('./createBoard')
 var checkCells = require('./checkCells')
 var getNeighbours = require('./getNeighbours')
 var checkNextCellStatus = require('./checkNextCellStatus')
 
-currentBoard = createBoard(3)
-cellsArr = checkCells(currentBoard)
-checkNextCellStatus(cellsArr, currentBoard)
+var currentBoard = createBoard(10)
+var cellsArr = checkCells(currentBoard)
+
+console.log(currentBoard)
+
+let timerId = setTimeout(function delay(){
+  clear()
+  currentBoard = checkNextCellStatus(cellsArr, currentBoard)
+  console.log(currentBoard)
+  timerId = setTimeout(delay, 10)
+}, 10)
+
+  // let timerId = setTimeout(function tick() {
+  //   clear()
+  //   currentBoard = checkNextCellStatus(cellsArr, currentBoard)
+  //   console.log(currentBoard);
+  //   timerId = setTimeout(tick, 100); // (*)
+  // }, 1000);

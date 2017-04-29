@@ -18,11 +18,20 @@ function incrementAlive(aliveCount){
 }
 
 function setCellStatus(cell) {
-  cell.aliveCount > 2 ? cell.underPopulated = true : false
-  cell.aliveCount == 2 ? cell.staysAlive = true : false
-  cell.aliveCount == 3 ? cell.resurrectable = true : false
-  cell.aliveCount > 3 ? cell.overPopulated = true : false
-  console.log(cell);
+  // cell.aliveCount > 2 ? cell.underPopulated = true : false
+  // cell.aliveCount == 2 ? cell.staysAlive = true : false
+  // cell.aliveCount == 3 ? cell.resurrectable = true : false
+  // cell.aliveCount > 3 ? cell.overPopulated = true : false
+  if(cell.aliveCount < 2) {
+    cell.underPopulated = true
+  } else if(cell.aliveCount == 2) {
+    cell.staysAlive = true
+  } else if(cell.aliveCount == 3){
+    cell.staysAlive = true
+    cell.resurrectable = true
+  } else {
+    cell.overPopulated = true
   }
+}
 
 module.exports = checkNeighbourStatus
