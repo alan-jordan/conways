@@ -1,6 +1,7 @@
 var getNeighbours = require('./getNeighbours')
 
 function checkCells(board) {
+  arr = []
   var allCells = []
   for (var i = 0; i < board.length; i++) {
     for (var j = 0; j < board.length; j++) {
@@ -8,7 +9,10 @@ function checkCells(board) {
       allCells.push(tempArr)
     }
   }
-  console.log(allCells)
+  neighbours = allCells.map(function(cell) {
+    arr.push(getNeighbours(cell, board.length))
+  })
+  console.log(arr);
   return arr
 }
 module.exports = checkCells
