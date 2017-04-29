@@ -12,7 +12,6 @@ function checkCells(board) {
   neighbours = allCells.map(function(cell) {
     arr.push(getNeighbours(cell, board.length))
   })
-  console.log(arr);
   return arr
 }
 module.exports = checkCells
