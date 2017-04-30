@@ -6,12 +6,12 @@ var checkNextCellStatus = require('./checkNextCellStatus')
 var renderBoard = require('./renderBoard')
 
 
-var currentBoard = createBoard(25)
+var currentBoard = createBoard(10)
 
 let timerId = setTimeout(function delay(){
   clear()
   cellsArr = checkCells(currentBoard)
   currentBoard = checkNextCellStatus(cellsArr, currentBoard)
-  // renderBoard(currentBoard)
+  renderBoard(currentBoard)
   timerId = setTimeout(delay, 2000)
 }, 2000)
