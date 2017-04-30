@@ -10,6 +10,7 @@ function checkNextCellStatus(cells, board) {
       board[row][col] = false
     }
   })
+  console.log(board);
   return board
 }
 
