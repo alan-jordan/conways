@@ -9,11 +9,6 @@ function renderBoard(board) {
     console.log(str);
     arr[i].push(str)
   }
-  // Need to refactor and seperate these out to generate and render
-  // str =
-  // renderedBoard = arr.filter(function(cell, index){
-  //   console.log(cell[index]);
-  // })
 }
 
 module.exports = renderBoard
