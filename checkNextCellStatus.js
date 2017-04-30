@@ -4,7 +4,7 @@ function checkNextCellStatus(cells, board) {
     var col = cell.cellPos[1]
     if(board[row][col] = false){
       cell.resurrectable ? board[row][col] = true : false
-    } else {
+    } else if (board[row][col] = true){
       cell.underPopulated ? board[row][col] = false : false
       cell.overPopulated ? board[row][col] = false : false
       cell.staysAlive ? board[row][col] = true : false
