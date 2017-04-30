@@ -31,9 +31,8 @@ function setCellStatus(cell) {
   } else if(cell.aliveCount == 2) {
     cell.staysAlive = true
   } else if(cell.aliveCount == 3){
-    cell.staysAlive = true
     cell.resurrectable = true
-  } else {
+  } else if(cell.aliveCount > 3){
     cell.overPopulated = true
   }
 }
