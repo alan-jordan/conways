@@ -6,7 +6,7 @@ var checkNextCellStatus = require('./checkNextCellStatus')
 var renderBoard = require('./renderBoard')
 
 
-var currentBoard = createBoard(10)
+var currentBoard = createBoard(100)
 
 let timerId = setTimeout(function delay(){
   clear()
