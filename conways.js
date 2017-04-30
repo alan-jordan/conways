@@ -12,6 +12,6 @@ let timerId = setTimeout(function delay(){
   clear()
   cellsArr = checkCells(currentBoard)
   currentBoard = checkNextCellStatus(cellsArr, currentBoard)
-  renderBoard(currentBoard)
+  // renderBoard(currentBoard)
   timerId = setTimeout(delay, 2000)
 }, 2000)

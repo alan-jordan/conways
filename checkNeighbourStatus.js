@@ -9,6 +9,7 @@ function checkNeighbourStatus(board, cells) {
       board[row][col] === true ? aliveCount = incrementAlive(aliveCount) : false
     })
     cells[i].aliveCount = aliveCount
+    console.log(cells[i].aliveCount)
     setCellStatus(cells[i])
     }
   return cells
