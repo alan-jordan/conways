@@ -4,7 +4,7 @@ function renderBoard(board) {
     arr[i] = []
     str = ""
     for(var j = 0; j < board.length; j++) {
-      board[i][j] == true ? str += "*" : str += "."
+      board[i][j] == true ? str += "*" : str += " "
     }
     console.log(str);
     arr[i].push(str)
