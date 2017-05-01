@@ -1,8 +1,5 @@
 var test = require('tape')
 var checkNextCellStatus = require('../checkNextCellStatus')
-var resurrectable = require('../resurrectable')
-var overPopulated = require('../overPopulated')
-var underPopulated = require('../underPopulated')
 var createBoard = require('../createBoard')
 var checkCells = require('../checkCells')
 
